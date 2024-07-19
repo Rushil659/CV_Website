@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Website</title>
+    <!-- Include Materialize CSS for styling -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Include Materialize JavaScript for interactive components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Include EmailJS library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Custom CSS for additional styling -->
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5; /* Light gray background color */
+            color: #333; /* Dark text color */
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        nav {
+            background-color: #2c3e50; /* Dark blue background color */
+        }
+        .brand-logo {
+            font-size: 1.8rem;
+        }
+        .scrollspy {
+            padding: 50px 0;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .profile-pic {
+            width: 200px; /* Increased size */
+            height: 200px; /* Increased size */
+            border-radius: 50%; /* Make the image circular */
+            overflow: hidden;
+            margin: 20px auto; /* Center the image */
+        }
+        .profile-pic img {
+            width: 100%;
+            height: auto;
+        }
+        .timeline ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .timeline ul li {
+            position: relative;
+            margin: 20px 0;
+        }
+        .timeline ul li div {
+            background: #2980b9; /* Blue background color */
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .timeline ul li:nth-child(even) div {
+            margin-left: auto; /* Align even items to the right */
+        }
+        time {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #2c3e50; /* Dark blue background color */
+            padding: 20px 0;
+            text-align: center;
+            color: white; /* White text color */
+        }
+        .btn {
+            background-color: #2c3e50; /* Dark blue background color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">My CV</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- Links to different sections of the page -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work-experience">Work Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About section -->
+        <section id="about" class="container section scrollspy">
+            <div class="row">
+                <div class="col s12 center">
+                    <!-- Profile picture -->
+                    <div class="profile-pic">
+                        <!-- Ensure the image path is correct -->
+                        <img src="Rushil_Dogra.jpg" alt="Profile Picture">
+                    </div>
+                    <h2>About Me</h2>
+                    <p>Assisted by a string of great GCSE results and A-Level predictions from Greenshaw High School, I would like to either graduate with a PHD from a good university or enrol myself and succeed in an apprenticeship. Along with my academic achievements, I also excel in a variety of sports such as cricket, football, squash and table-tennis since I have also gone on to represent my school in these sports. As a student currently working to achieve the best A-Level results, I pride myself on working hard but also enjoying myself at the same time through playing as well as watching sports in order to understand the importance of teamwork.</p>
+                    <p>Alongside these accolades that I have managed to gain in Greenshaw High School, I have also successfully completed both DofE Bronze as well as Silver and my future aim is to also complete DofE Gold. To further enhance myself, I have also done my work experience at a highly-reputed company in 6Point6 (Soon to be bought by Accenture). I started my work experience with them on Monday this week and worked in collaboration with them until Friday. This helped me comprehend the various types of jobs and what they entail. However, the main thing I had learnt about this work experience with 6Point6 is that when multiple problems are thrown at you one after the other, you can not lose your calmness and composure as not only will this impact yourself negatively but the rest of your teammates and client.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work experience section -->
+        <section id="work-experience" class="container section scrollspy">
+            <h2>Work Experience</h2>
+            <section class="timeline">
+                <ul>
+                    <!-- Each work experience item -->
+                    <li>
+                        <div>
+                            <time>March 2024 - Present (5 months)</time> 
+                            <strong>Senior Consultant, Data Engineer</strong> at 6point6 | Part of Accenture<br>
+                            Greater London, England, United Kingdom
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time>April 2023 - March 2024 (1 year)</time> 
+                            <strong>Consultant Data Engineer</strong> at 6point6 | Part of Accenture<br>
+                            London, England, United Kingdom<br>
+                            <ul>
+                                <li>Engineered versatile ETL pipelines utilizing both batch and streaming technologies in alignment with software engineering best practices.</li>
+                                <li>Revamped existing data pipelines to enhance scalability, robustness, and automation.</li>
+                                <li>Designed and implemented data applications, covering exports, real-time reporting, APIs, and intuitive data visualization features.</li>
+                                <li>Performed queries and ensured top-notch data quality while resolving discrepancies in data mapping and databases.</li>
+                                <li>Orchestrated seamless data flows that effectively link operational systems with analytics and BI platforms.</li>
+                                <li>Authored comprehensive documentation capturing essential functionalities and spearheaded the delivery of rigorously-tested code, encompassing both unit and integration tests.</li>
+                                <li>Engaged proactively in an agile setting, contributing to scrum activities and team dialogues to clarify design concepts, functional requirements, and resolve issues.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time>April 2022 - April 2023 (1 year 1 month)</time> 
+                            <strong>Consultant Data Engineer Associate</strong> at 6point6 | Part of Accenture<br>
+                            London, England, United Kingdom<br>
+                            <p>At 6point6, we drive the right change in an organization through the positive impact of technology. Leading with strategy, design, and architecture, we connect cloud, data, and cyber to engineer and drive large-scale, complex transformations across public and private sectors.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time>September 2021 - March 2022 (7 months)</time> 
+                            <strong>Graduate Data Engineer</strong> at 6point6 | Part of Accenture<br>
+                            London, England, United Kingdom
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Education section -->
+        <section id="education" class="container section scrollspy">
+            <h2>Education</h2>
+            <ul class="collection">
+                <!-- Each education item -->
+                <li class="collection-item">University of Greenwich<br>MSc, Big Data and Business Intelligence · (September 2019 - October 2020)</li>
+                <li class="collection-item">University of Greenwich<br>Bachelor's degree, Computer Science · (2016 - 2019)</li>
+                <li class="collection-item">Croydon College<br>BTEC, Information Technology · (September 2014 - July 2016)</li>
+            </ul>
+        </section>
+
+        <!-- Testimonials section -->
+        <section id="testimonials" class="container section scrollspy">
+            <h2>Testimonials</h2>
+            <ul class="collection">
+                <!-- Each testimonial item -->
+                <li class="collection-item">
+                    "Mohamed is a great asset to any team he is in and an incredibly hard worker who strives for excellence in all that he does. Mohamed also does all that he can to support his colleagues both current and ex colleagues and will always go over and above to succeed. His skills and personality will support him to go further and develop good strong working relationships with those he works with. His focus and determination set him above the bar and he will invoke himself in work that he truly cares about and will continue to support upcoming individuals to achieve their goals." - Jas Seehra-Pearce, EDI Strategy and Planning, Business Operations and Project Management
+                </li>
+            </ul>
+        </section>
+
+        <!-- Portfolio section -->
+        <section id="portfolio" class="container section scrollspy">
+            <h2>Portfolio</h2>
+            <div class="row">
+                <!-- Each portfolio item -->
+               
+              
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <a href="https://github.com/AL-Kaisi/AmazonReviews-Kaggle_dataset" target="_blank">AmazonReviews-Kaggle_dataset</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills" class="container section scrollspy">
+            <h2>Skills</h2>
+            <div class="row">
+                <!-- Each skill with a progress bar -->
+                <div class="col s12 m6">
+                    <p>Docker</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Data Quality</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Amazon EC2</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>AWS Lambda</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Amazon S3</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Terraform</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>PostgreSQL</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Extract, Transform, Load (ETL)</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Android Development</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>AngularJS</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>AWS Glue</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Scala</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Predictive Analytics</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Unstructured Data</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 55%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Representational State Transfer (REST)</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>REST APIs</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 45%;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p>Data Science</p>
+                    <div class="progress">
+                        <div class="determinate" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="container section scrollspy">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <div class="row">
+                    <!-- Name input field -->
+                    <div class="input-field col s12 m6">
+                        <input id="name" type="text" name="name" class="validate" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <!-- Email input field -->
+                    <div class="input-field col s12 m6">
+                        <input id="email" type="email" name="email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <!-- Message input field -->
+                    <div class="input-field col s12">
+                        <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <!-- Submit button -->
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Materialize components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all Materialize components
+            M.AutoInit();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // EmailJS initialization and contact form submission
+        (function() {
+            emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this) // Replace with your EmailJS service ID and template ID
+                .then(function() {
+                    M.toast({html: 'Email sent successfully!', classes: 'rounded'});
+                }, function(error) {
+                    M.toast({html: 'Failed to send email. Please try again later.', classes: 'rounded'});
+                });
+        });
+    </script>
+</body>
+</html>
